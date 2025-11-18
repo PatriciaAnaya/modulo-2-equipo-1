@@ -62,7 +62,6 @@ GROUP BY City
 HAVING empleadas >= 4;
 
 /*Crea una nueva columna basándonos en la cantidad monetaria*/
-/*SELECT COUNT(orderID) AS pedidos*/
 
 SELECT OrderID, SUM(UnitPrice * Quantity) AS CostoTotalPedido,
 CASE
@@ -72,6 +71,10 @@ END AS TipoPedido
 FROM orderdetails
 GROUP BY OrderID
 ORDER BY OrderID;
+
+-- Fin
+
+
 
 
 
