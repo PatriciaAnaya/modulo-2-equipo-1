@@ -72,8 +72,6 @@ FROM orderdetails
 GROUP BY OrderID
 ORDER BY OrderID;
 
--- Fin
-
 
 
 
