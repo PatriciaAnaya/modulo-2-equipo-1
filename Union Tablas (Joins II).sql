@@ -21,3 +21,8 @@ SELECT e.employeeID, CONCAT(e.firstname, " ", e.lastname) as Employee, COUNT(o.O
 FROM employees e
 RIGHT JOIN orders o ON e.EmployeeID = o.EmployeeID
 group by employeeID;
+
+-- Desde el área de logística nos piden una lista de todos los transportistas (shippers) y los pedidos que han enviado.
+SELECT s.shipperID,s.companyname as Nombre_Transportista, o.orderID,o.orderdate
+FROM shippers s
+LEFT JOIN orders o ON s.shipperID=o.shipvia;
